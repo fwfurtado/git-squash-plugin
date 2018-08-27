@@ -8,7 +8,7 @@ usage() {
 	echo "USAGE:"
 	echo
 	
-	echo "\tgit squash <commit>"
+	echo "\tgit squash --commit <commit>"
 	echo "\tgit squash --diff [<source-branch>] <target-branch>"
 
 	echo "DESCRIPTION:"
@@ -18,7 +18,7 @@ usage() {
 	echo "\tIn another hand, the second form compute diff between <source-branch> (if not specified use HEAD) and <target-branch> and squash it."
 	echo
 
-	echo "\tgit squash <commit>"
+	echo "\tgit squash --commit <commit>"
 	echo "\t\tReset all changes till the <commit> to stage"
 	echo
 
@@ -31,9 +31,10 @@ usage() {
 	echo
 	
 	echo "\tgit squash HEAD~4"
-	echo "\tgit squash 0987208108265812"
+	echo "\tgit squash --commit 0987208108265812"
 	echo "\tgit squash --diff feature release"
 	echo "\tgit squash --diff release"
+	echo
 }
 
 main(){
@@ -41,16 +42,36 @@ main(){
 		usage; exit 1
 	fi
 	
-
-	local subcomand="$1"; shift
-
-	echo $subcomand
+	local subcomand=$1; shift
 
 	case $subcomand in
 		"-h"|"--help")
 			usage; exit 0
 			;;
+		"-c"|"--commit")
+			squash_by_commit "$@";
+			;;
+		"-d"|"--diff")
+			squash_by_diff
+			;;
+		*)
+			usage; exit 1
+			;;
+
 	esac
 }
 
+squash_by_commit() {
+	if [ "$#" -lt 1 ]; then
+		echo "Missing argument <commit>"
+		echo
+		usage; exit 1
+	fi
+
+	local commit_expression="$@"
+
+	git reset --soft $commit_expression
+
+	exit 0
+}
 main "$@"
