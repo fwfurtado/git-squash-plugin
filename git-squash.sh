@@ -18,11 +18,13 @@ usage() {
 	echo "\tIn another hand, the second form compute diff between <source-branch> (if not specified use HEAD) and <target-branch> and squash it."
 	echo
 
-	echo "\tgit squash --commit <commit>"
+	echo "OPTIONS:"
+	echo
+	echo "\t-c, --commit <commit>"
 	echo "\t\tReset all changes till the <commit> to stage"
 	echo
 
-	echo "\tgit squash [<source-branch>] <target-branch>"
+	echo "\t-d, --diff [<source-branch>] <target-branch>"
 	echo "\t\tReset all changes between <source-branch> and <target-branch> to stage"
 	echo "\t\tIf the <source-branch> isn't specified, used HEAD for comparison."
 	echo
@@ -30,7 +32,7 @@ usage() {
 	echo "EAMPLE:"
 	echo
 	
-	echo "\tgit squash HEAD~4"
+	echo "\tgit squash --commit HEAD~1"
 	echo "\tgit squash --commit 0987208108265812"
 	echo "\tgit squash --diff feature release"
 	echo "\tgit squash --diff release"
