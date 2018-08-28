@@ -3,7 +3,7 @@
 
 usage() {
 	echo "NAME:"
-	echo "\tgit-sqush - Squash several commits"
+	echo "\tgit-squash - Squash several commits"
 
 	echo "USAGE:"
 	echo
