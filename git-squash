@@ -15,7 +15,7 @@ usage() {
 	echo
 
 	echo "\tIn the first form, squash all commits before the <commit>."
-	echo "\tIn another hand, the second form compute diff between <source-branch> (if not specified use HEAD) and <target-branch> and squash it."
+	echo "\tIn another hand, the second form compute diff between HEAD and <target-branch> and squash it."
 	echo
 
 	echo "OPTIONS:"
