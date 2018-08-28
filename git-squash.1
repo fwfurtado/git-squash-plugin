@@ -1,0 +1,22 @@
+.\" Mannpage for git-squash.
+.\" Contact feh.wilinando@gmail.com to correct errors or typos.
+.TH man 8 "28 Aug 2018" "1.0" "git-squash man page"
+.SH NAME
+git-squash - Squash several commits 
+.SH SYNOPSIS
+git squash --commit <commit>
+git squash --diff <target-branch
+.SH DESCRIPTION
+In the first form, squash all commits before the <commit>.
+In another hand, the second form compute diff of commits between HEAD and <target-branch>, and squash it.
+.SH OPTIONS
+-c, --commit <commit> Reset all changes till the <commit> to stage
+-d, --diff <target-branch> Reset all changes between HEAD and <target-branch> to stage<Paste>
+.SH BUGS
+.SH EXAMPLE
+git squash --commit HEAD~1
+git squash --commit 0987208108265812
+git squash --diff master
+No known bugs.
+.SH AUTHOR
+Fernando Willian (feh.wilinando@gmail.com)
