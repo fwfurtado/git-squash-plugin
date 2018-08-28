@@ -4,9 +4,16 @@ This is a simple extension for git to squash several commits until `commit id` o
 
 ## Instalation 
 ---
-1. Clone this repository somewhere on your machine. This guide will assume `~/.git-extensions/`.
+### Shortcut ways
+1. Only run this long line in your shell
 ```
 git clone https://github.com/feh-wilinando/git-squash-plugin.git ~/.git-extensions/git-squash-plugin && pushd $(pwd) && cd ~/.git-extensions/git-squash-plugin && make install && popd
+```
+
+### Manual Instalation
+1. Clone this repository shomewhere on your machine. This guide will assume `~/.git-extensions`
+```
+git clone https://github.com/feh-wilinando/git-squash-plugin.git ~/.git-extensions/git-squash-plugin
 ```
 2. Install extension.
 ```
