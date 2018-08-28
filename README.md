@@ -7,7 +7,7 @@ This is a simple extension for git to squash several commits until `commit id` o
 ### Shortcut ways
 1. Only run this long line in your shell
 ```
-curl -o- -s https://git.io/fAs3f | sh
+curl -o- -s https://raw.githubusercontent.com/feh-wilinando/git-squash-plugin/master/.installation.sh | sh
 ```
 
 ### Manual Instalation
