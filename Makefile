@@ -8,7 +8,7 @@ install:
 	
 	@install -d -m 0755 $(BIN_DIR)
 
-	@install -m 0644 $(EXTENSION) $(BIN_DIR)
+	@install -m 0755 $(EXTENSION) $(BIN_DIR)
 	
 	@echo "Instalation complete"
 	
