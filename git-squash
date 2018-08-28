@@ -1,42 +1,8 @@
 #!/usr/bin/env sh
 
-
 usage() {
-	echo "NAME:"
-	echo "\tgit-squash - Squash several commits"
-
-	echo "USAGE:"
-	echo
-	
-	echo "\tgit squash --commit <commit>"
-	echo "\tgit squash --diff <target-branch>"
-
-	echo "DESCRIPTION:"
-	echo
-
-	echo "\tIn the first form, squash all commits before the <commit>."
-	echo "\tIn another hand, the second form compute diff of commits between HEAD and <target-branch>, and squash it."
-	echo
-
-	echo "OPTIONS:"
-	echo
-	echo "\t-c, --commit <commit>"
-	echo "\t\tReset all changes till the <commit> to stage"
-	echo
-
-	echo "\t-d, --diff <target-branch>"
-	echo "\t\tReset all changes between HEAD and <target-branch> to stage"
-	echo
-
-	echo "EAMPLE:"
-	echo
-	
-	echo "\tgit squash --commit HEAD~1"
-	echo "\tgit squash --commit 0987208108265812"
-	echo "\tgit squash --diff master"
-	echo
+	git squash --help
 }
-
 main(){
 	if [ "$#" -lt 1 ]; then
 		usage; exit 1
