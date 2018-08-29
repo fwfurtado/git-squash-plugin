@@ -9,10 +9,6 @@ This is a simple extension for git to squash several commits until `commit id` o
 ```
 curl -o- -s https://raw.githubusercontent.com/feh-wilinando/git-squash-plugin/master/.installation.sh | sh
 ```
-echo "alias gsq='git squash'" >> $HOME/$file
-echo "alias gsqd='git squash -d ' " >> $HOME/$file
-echo "alias gsqc='git squash -c ' " >> $HOME/$file
-echo "alias gsqm='git squash -d master '" >> $HOME/$file
 
 ### Usage
 
