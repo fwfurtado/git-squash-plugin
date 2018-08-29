@@ -3,7 +3,7 @@ EXTENSION = git-squash
 MANUAL = git-squash.1
 MAN_PATH=/usr/local/share/man/man1
 all:
-	@echo "usage make [install | uninstall]"
+	@echo "usage make [install | uninstall | update]"
 
 install:
 	@echo "Installing git squash extension..." 
@@ -31,3 +31,7 @@ uninstall:
 
 	@echo "Uninstallation complete"
 
+update:
+	@echo "Installing new version of git squash extension..."
+	@git pull origin master > /dev/null
+	make install > /dev/null
