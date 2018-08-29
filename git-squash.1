@@ -4,14 +4,15 @@
 .SH NAME
 git-squash - Squash several commits 
 .SH SYNOPSIS
-git squash --commit <commit>
-git squash --diff <target-branch
+git squash --commit <commit> --message <message>
+git squash --diff <target-branch --message <message>
 .SH DESCRIPTION
 In the first form, squash all commits before the <commit>.
 In another hand, the second form compute diff of commits between HEAD and <target-branch>, and squash it.
 .SH OPTIONS
--c, --commit <commit> Reset all changes till the <commit> to stage
--d, --diff <target-branch> Reset all changes between HEAD and <target-branch> to stage<Paste>
+-c, --commit <commit> Create new commit squasing commits till the <commit>
+-d, --diff <target-branch> Create new commit squashing commits between HEAD and <target-branch> 
+-m, --message <message> message of squashed commit
 .SH BUGS
 .SH EXAMPLE
 git squash --commit HEAD~1
