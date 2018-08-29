@@ -9,7 +9,37 @@ This is a simple extension for git to squash several commits until `commit id` o
 ```
 curl -o- -s https://raw.githubusercontent.com/feh-wilinando/git-squash-plugin/master/.installation.sh | sh
 ```
+echo "alias gsq='git squash'" >> $HOME/$file
+echo "alias gsqd='git squash -d ' " >> $HOME/$file
+echo "alias gsqc='git squash -c ' " >> $HOME/$file
+echo "alias gsqm='git squash -d master '" >> $HOME/$file
 
+### Usage
+
+![git squash plugin](git-squash-plugin.gif)
+
+## Plugins Shortcuts
+
+These are the `shortcuts` available to work with plugin:
+
+```
+ gsq -d master or gsq -c {commit-id} -> to avoid use git squash
+```
+
+```
+ gsqd master ->  to avoid use git squash -d master
+```
+
+```
+ gsqc {commit-id} ->  to avoid use git squash -c commit-id
+```
+
+```
+ gsqm ->  to avoid use git squash -d master
+```
+
+
+ 
 ### Manual Instalation
 1. Clone this repository shomewhere on your machine. This guide will assume `~/.git-extensions`
 ```
